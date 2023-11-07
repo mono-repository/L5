@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'tweets/index'
-  get 'tweets/new'
+  get 'top/main'
+  post 'top/login'
+  get 'top/logout'
+  
   resources :tweets
+  resources :users
   
   root 'tweets#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

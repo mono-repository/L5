@@ -16,3 +16,13 @@
   <%= f.text_field :message %>
   <%= f.submit 'ツイート' %>
 <% end %>
+
+<hr>
+
+<% if session[:login_uid] %>
+  <p><%= link_to "ログアウト", top_logout_path %></p>
+<% else %>
+    <p><%= link_to "ログイン", top_main_path %></p>
+<% end %>
+
+<%= link_to "ユーザー一覧", users_path %>
